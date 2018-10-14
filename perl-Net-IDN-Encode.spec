@@ -4,7 +4,7 @@
 #
 Name     : perl-Net-IDN-Encode
 Version  : 2.500
-Release  : 3
+Release  : 4
 URL      : https://cpan.metacpan.org/authors/id/C/CF/CFAERBER/Net-IDN-Encode-2.500.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/C/CF/CFAERBER/Net-IDN-Encode-2.500.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libn/libnet-idn-encode-perl/libnet-idn-encode-perl_2.400-1.debian.tar.xz
@@ -58,9 +58,9 @@ make TEST_VERBOSE=1 test
 %install
 rm -rf %{buildroot}
 if test -f Makefile.PL; then
-make pure_install PERL_INSTALL_ROOT=%{buildroot}
+make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
-./Build install --installdirs=site --destdir=%{buildroot}
+./Build install --installdirs=vendor --destdir=%{buildroot}
 fi
 find %{buildroot} -type f -name .packlist -exec rm -f {} ';'
 find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null ';'
@@ -69,14 +69,14 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.26.1/Net/IDN/Encode.pm
-/usr/lib/perl5/site_perl/5.26.1/Net/IDN/Overview.pod
-/usr/lib/perl5/site_perl/5.26.1/Net/IDN/Punycode.pm
-/usr/lib/perl5/site_perl/5.26.1/Net/IDN/Punycode.xs
-/usr/lib/perl5/site_perl/5.26.1/Net/IDN/Punycode/PP.pm
-/usr/lib/perl5/site_perl/5.26.1/Net/IDN/Standards.pod
-/usr/lib/perl5/site_perl/5.26.1/Net/IDN/UTS46.pm
-/usr/lib/perl5/site_perl/5.26.1/Net/IDN/UTS46/_Mapping.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Net/IDN/Encode.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Net/IDN/Overview.pod
+/usr/lib/perl5/vendor_perl/5.26.1/Net/IDN/Punycode.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Net/IDN/Punycode.xs
+/usr/lib/perl5/vendor_perl/5.26.1/Net/IDN/Punycode/PP.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Net/IDN/Standards.pod
+/usr/lib/perl5/vendor_perl/5.26.1/Net/IDN/UTS46.pm
+/usr/lib/perl5/vendor_perl/5.26.1/Net/IDN/UTS46/_Mapping.pm
 
 %files dev
 %defattr(-,root,root,-)
