@@ -4,7 +4,7 @@
 #
 Name     : perl-Net-IDN-Encode
 Version  : 2.500
-Release  : 7
+Release  : 8
 URL      : https://cpan.metacpan.org/authors/id/C/CF/CFAERBER/Net-IDN-Encode-2.500.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/C/CF/CFAERBER/Net-IDN-Encode-2.500.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libn/libnet-idn-encode-perl/libnet-idn-encode-perl_2.400-1.debian.tar.xz
