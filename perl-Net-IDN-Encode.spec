@@ -69,14 +69,14 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.1/Net/IDN/Encode.pm
-/usr/lib/perl5/vendor_perl/5.28.1/Net/IDN/Overview.pod
-/usr/lib/perl5/vendor_perl/5.28.1/Net/IDN/Punycode.pm
-/usr/lib/perl5/vendor_perl/5.28.1/Net/IDN/Punycode.xs
-/usr/lib/perl5/vendor_perl/5.28.1/Net/IDN/Punycode/PP.pm
-/usr/lib/perl5/vendor_perl/5.28.1/Net/IDN/Standards.pod
-/usr/lib/perl5/vendor_perl/5.28.1/Net/IDN/UTS46.pm
-/usr/lib/perl5/vendor_perl/5.28.1/Net/IDN/UTS46/_Mapping.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Net/IDN/Encode.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Net/IDN/Overview.pod
+/usr/lib/perl5/vendor_perl/5.28.2/Net/IDN/Punycode.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Net/IDN/Punycode.xs
+/usr/lib/perl5/vendor_perl/5.28.2/Net/IDN/Punycode/PP.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Net/IDN/Standards.pod
+/usr/lib/perl5/vendor_perl/5.28.2/Net/IDN/UTS46.pm
+/usr/lib/perl5/vendor_perl/5.28.2/Net/IDN/UTS46/_Mapping.pm
 
 %files dev
 %defattr(-,root,root,-)
