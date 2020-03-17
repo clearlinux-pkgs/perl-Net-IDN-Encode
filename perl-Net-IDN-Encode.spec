@@ -4,7 +4,7 @@
 #
 Name     : perl-Net-IDN-Encode
 Version  : 2.500
-Release  : 13
+Release  : 14
 URL      : https://cpan.metacpan.org/authors/id/C/CF/CFAERBER/Net-IDN-Encode-2.500.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/C/CF/CFAERBER/Net-IDN-Encode-2.500.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libn/libnet-idn-encode-perl/libnet-idn-encode-perl_2.400-1.debian.tar.xz
@@ -80,7 +80,7 @@ make TEST_VERBOSE=1 test
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/perl-Net-IDN-Encode
 cp %{_builddir}/Net-IDN-Encode-2.500/LICENSE %{buildroot}/usr/share/package-licenses/perl-Net-IDN-Encode/2f9c36bb77cf37f73a6e820491494f303a761789
-cp %{_builddir}/Net-IDN-Encode-2.500/deblicense/copyright %{buildroot}/usr/share/package-licenses/perl-Net-IDN-Encode/890c676b50b181b4066ea4afc96ec3cfdb9d59d3
+cp %{_builddir}/debian/copyright %{buildroot}/usr/share/package-licenses/perl-Net-IDN-Encode/890c676b50b181b4066ea4afc96ec3cfdb9d59d3
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -111,11 +111,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/Net/IDN/Encode.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Net/IDN/Overview.pod
-/usr/lib/perl5/vendor_perl/5.30.1/Net/IDN/Punycode.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Net/IDN/Punycode.xs
-/usr/lib/perl5/vendor_perl/5.30.1/Net/IDN/Punycode/PP.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Net/IDN/Standards.pod
-/usr/lib/perl5/vendor_perl/5.30.1/Net/IDN/UTS46.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Net/IDN/UTS46/_Mapping.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Net/IDN/Encode.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Net/IDN/Overview.pod
+/usr/lib/perl5/vendor_perl/5.30.2/Net/IDN/Punycode.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Net/IDN/Punycode.xs
+/usr/lib/perl5/vendor_perl/5.30.2/Net/IDN/Punycode/PP.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Net/IDN/Standards.pod
+/usr/lib/perl5/vendor_perl/5.30.2/Net/IDN/UTS46.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Net/IDN/UTS46/_Mapping.pm
